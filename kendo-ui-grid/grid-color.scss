@@ -1,0 +1,77 @@
+$font-stack: Helvetica, sans-serif;
+$font-color: #232323;
+
+$header-color: #403433;
+$header-bg-color: #FFF;
+$primary-color: $font-color;
+$primary-bg-color: #8B682E;
+$primary-darker-color: darken($primary-color,10%);
+$primary-darker-bg-color: darken($primary-bg-color,10%);
+$secondary-color: $font-color;
+$secondary-bg-color: #8B682E;
+$secondary-darker-color: darken($secondary-color,10%);
+$secondary-darker-bg-color: darken($secondary-bg-color,10%);
+$third-color: $font-color;
+$third-bg-color: #8B682E;
+$third-darker-color: darken($third-color,10%);
+$third-darker-bg-color: darken($third-bg-color,10%);
+$highlighted-bg-color: lighten($primary-color,10%);
+
+.k-grid-header th.k-header {
+    background-image: none;
+    color: $header-color;    
+    background-color: $header-bg-color;
+}
+
+div.k-grid-header {
+    color: $header-color;    
+    background-color: $header-bg-color;
+}
+
+.k-header, .k-treemap-title, .k-grid-header .k-header > .k-link {
+    color: $header-color;    
+    background-color: $header-bg-color;
+}
+
+.k-master-row, .k-detail-row {
+    color: $primary-color;
+    background: $primary-bg-color;
+}
+
+/* general grid background */
+.k-grid-content {
+    background-color: $primary-bg-color;
+}
+
+/* primary table */
+.k-master-row, .k-detail-row {
+    background: $primary-bg-color;
+}
+
+.k-alt, .k-separator, .k-alt.k-resource, .k-pivot-layout > tbody > tr:first-child > td:first-child {
+    background: $primary-darker-bg-color;
+}
+
+/* secondary table */
+.k-detail-cell > div.k-grid > table.k-selectable > tbody > tr:nth-child(2n+1) > td, .k-detail-cell > div.k-grid > table.k-selectable > tbody > tr:nth-child(2n+1) > td > th {
+    background: $secondary-bg-color;
+}
+
+.k-detail-cell > div.k-grid > table.k-selectable > tbody > tr:nth-child(2n) > td, .k-detail-cell > div.k-grid > table.k-selectable > tbody > tr:nth-child(2n) > td > th {
+    background: $secondary-darker-bg-color;
+}
+
+/* third level table */
+td.k-detail-cell > div.k-grid > div.k-grid-content > table > tbody > tr:nth-child(2n+1) > td, td.k-detail-cell > div.k-grid > div.k-grid-content > table > tbody > tr:nth-child(2n+1) > td > th {
+    background: $third-bg-color;
+}
+
+td.k-detail-cell > div.k-grid > div.k-grid-content > table > tbody > tr:nth-child(2n) > td, td.k-detail-cell > div.k-grid > div.k-grid-content > table > tbody > tr:nth-child(2n) > td > th {
+    background: $third-darker-bg-color;
+}
+
+/* highlighted table row */
+.k-state-selected, .k-state-selected:link, .k-state-selected:visited, .k-list > .k-state-selected, .k-list > .k-state-highlight, .k-panel > .k-state-selected, .k-ghost-splitbar-vertical, .k-ghost-splitbar-horizontal, .k-state-selected.k-draghandle:hover, .k-scheduler .k-scheduler-toolbar .k-state-selected, .k-scheduler .k-state-selected.k-today, .k-marquee-color {
+    background: $highlighted-bg-color;
+    color: $primary-bg-color
+}
